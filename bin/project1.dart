@@ -1,22 +1,86 @@
 import 'dart:io';
-import 'dart:math';
+import 'package:project1/Parent.dart';
 
+import '../lib/car.dart';
 import '../lib/human.dart';
 
+abstract class Laptop {
+  Laptop() {}
+  show() {
+    print("Laptop class");
+  }
+
+  void wtch();
+}
+
+class Mobile extends Laptop {
+  show() {
+    super.show();
+    print("Mobile class");
+  }
+
+  @override
+  void wtch() {
+    // TODO: implement wtch
+  }
+}
+
+class Nokia implements Laptop, Mobile {
+  @override
+  show() {
+    // TODO: implement show
+    throw UnimplementedError();
+  }
+
+  @override
+  void wtch() {
+    // TODO: implement wtch
+  }
+}
+// import 'dart:js_util';
+// import 'dart:math';
+
 void main(List<String> arguments) {
-  Human obj1 = Human("amirr", 4);
+  Child child1 = Child();
 
-  obj1.showData();
+  String s = Parent.classChnages;
 
-  Human obj2 = Human("junaid", 46);
-  obj2.findArea(radius: 1);
+  print(s);
 
-  Human junaidTeacher = Human("junaid", 26);
+  // child1.name = "nam21";
 
-  junaidTeacher.teaching();
+  child1.setNm = "jhff";
+  print(child1.name);
+  // child1.show();
 
-  
+  child1.habits();
+  // Human.evenOddMessage();
+  // Mobile mb = Mobile();
+  // mb.show();
 
+  // Human obj1 = Human("amirr", 4);
+
+  // obj1.showData();
+
+  // Human obj2 = Human("junaid", 46);
+  // obj2.findArea(radius: 1);
+
+  // Human junaidTeacher = Human("junaid", 26);
+
+  // junaidTeacher.teaching();
+
+  // Car car1 = Car("hammar", 2023);
+
+  // print(car1.engine);
+  // car1.age = 4;
+  // print(car1.age);
+
+  // Car obj1 = Car(n, m);
+
+  // Toyota t1 = Toyota();
+
+  // t1.age;
+  // print(t1.age);
 
   // print(junaid1.findEven(a: 20, b: 6));
 

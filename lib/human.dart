@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:io';
+
 class Human {
   String name = "junaid";
   int age = 25;
@@ -11,13 +14,18 @@ class Human {
     print(age);
   }
 
+  static void evenOddMessage() {
+    // int num = int.parse(stdin.readLineSync());
+    
+  }
+
   void teaching() {
     print("playing role as teacher");
   }
 
   findEven({required int a, required int b}) {
     int sum = a + b;
-
+ 
     for (int i = 0; i < sum; i++) {
       if (i % 2 == 0) {
         print({i, "is even"});
@@ -31,6 +39,4 @@ class Human {
     double circle = 3.14 * (radius * radius);
     print(circle);
   }
-
-  
 }
